@@ -8,11 +8,11 @@ body {
   justify-content: center;
 }
 
-.correct {
+.success {
   color: green;
 }
 
-.error {
+.failure {
   color: red;
 }
 

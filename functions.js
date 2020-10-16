@@ -1,28 +1,26 @@
 $(document).ready(function() {
   function showConfirmation() {
-    $('#error').text('');
-    $('#correct').text("Validation successful");
-    $("#printerMenu").hide();
-
+    $('#failure').text('');
+    $('#success').text("Validation successful");
   }
     
   function showError(field) {
     message = field;
     if(field == "fname")
-      message = "First name";
+      message = "First Name";
     else if(field == "lname")
-      message = "Last name";
+      message = "Last Name";
     else if(field == "email")
       message = "Email Address";
     else if(field == "notes")
       message = "Notes";
-    $('#correct').text('');
-    $('#error').text(message + " cannot be empty");
+    $('#success').text('');
+    $('#failure').text(message + " cannot be empty");
   }
     
-  $('#myForm').submit(function(e) {
+  $('#registrationForm').submit(function(e) {
       e.preventDefault()
-      fields = $('#myForm').serializeArray();
+      fields = $('#registrationForm').serializeArray();
       isSuccess = true;
       for(index in fields) {
         value = fields[index].value;
